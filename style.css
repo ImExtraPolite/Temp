@@ -5,7 +5,10 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
 }
+
 
 #container {
   width: 85%;
