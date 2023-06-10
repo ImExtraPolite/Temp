@@ -7,11 +7,25 @@
 	vertical-align: baseline;
   list-style: none;
   text-decoration: none;
+  /* border: solid; */
 }
 
-
 #container {
+  width: 100%;
+}
+
+#header, #content, #footer {
+  /* border: solid; */
   width: 85%;
   margin: auto;
-  border: solid;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#row2, #row3 {
+  /* border: solid; */
+  width: 90%;
 }
