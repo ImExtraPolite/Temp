@@ -22,7 +22,6 @@
 #row2, #row3 {
   width: 75%;
   margin: auto;
-
 }
 
 #header {
@@ -53,4 +52,45 @@
 
 .grey {
   background-color: #E5E7EB;
+}
+
+#row1 {
+  padding: 40px;
+  display: flex;
+}
+
+#left1 {
+  width: 70%;
+}
+
+#left1 h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+#left1 p{
+   font-size: 15px;
+   padding: 20px 0;
+}
+
+button {
+  background-color: #3882F6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+#row2 {
+  padding: 20px;
+}
+
+#row2 h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#images {
+  display: flex;
+  text-align: center;
 }
