@@ -14,10 +14,15 @@
   width: 100%;
 }
 
-#header, #content, #footer {
-  /* border: solid; */
+#header, #row1, #row4 {
   width: 85%;
   margin: auto;
+}
+
+#row2, #row3 {
+  width: 75%;
+  margin: auto;
+
 }
 
 #header {
@@ -37,11 +42,15 @@
   
 }
 
-#row2, #row3 {
-  /* border: solid; */
-  width: 90%;
+.blue {
+  background-color: #1f2937;
+  color: white;
 }
 
-.blue {
-  background-color: aqua;
+.blue a {
+  color: white;
+}
+
+.grey {
+  background-color: #E5E7EB;
 }
