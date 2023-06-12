@@ -99,3 +99,44 @@ button {
   border: solid #3882F6;
   border-radius: 20px;
 }
+
+#row3 {
+  padding: 20px;
+}
+
+#top {
+  font-size: 30px;
+  font-style: italic;
+}
+
+#bottom {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+
+#row4 {
+  background-color: #3882F6;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  color: white;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#right4 button{
+  border: solid white;
+}
+
+
+#footer {
+  text-align: center;
+  padding: 20px;
+}
