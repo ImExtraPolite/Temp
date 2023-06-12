@@ -94,3 +94,8 @@ button {
   display: flex;
   text-align: center;
 }
+
+#images img {
+  border: solid #3882F6;
+  border-radius: 20px;
+}
