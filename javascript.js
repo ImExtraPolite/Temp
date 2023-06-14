@@ -34,6 +34,8 @@ function playGame(playerSelection, computerSelection) {
   }
 }
 
-let userChoice = prompt("Rock, paper scissors: ");
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
-console.log(playGame(userChoice, getComputerChoice()));
+console.log(rock.textContent);
