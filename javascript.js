@@ -10,3 +10,27 @@ function getComputerChoice() {
   }
 }
 
+function playGame(playerSelection, computerSelection) {
+  playerSelection = playerSelection.toLowerCase();
+
+  if (playerSelection == "rock" && computerSelection == "rock") {
+    return "tie game";
+  } else if (playerSelection == "rock" && computerSelection == "paper") {
+    return "you lose";
+  } else if (playerSelection == "rock" && computerSelection == "scissors") {
+    return "you win";
+  } else if (playerSelection == "paper" && computerSelection == "rock") {
+    return "you win";
+  } else if (playerSelection == "paper" && computerSelection == "paper") {
+    return "tie game";
+  } else if (playerSelection == "paper" && computerSelection == "scissors") {
+    return "you lose";
+  } else if (playerSelection == "scissors" && computerSelection == "rock") {
+    return "you lose";
+  } else if (playerSelection == "scissors" && computerSelection == "paper") {
+    return "you win";
+  } else {
+    return "tie game";
+  }
+}
+
