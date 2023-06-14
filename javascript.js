@@ -14,23 +14,26 @@ function playGame(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
 
   if (playerSelection == "rock" && computerSelection == "rock") {
-    return "tie game";
+    return playerSelection + " " + computerSelection + " tie game";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
-    return "you lose";
+    return playerSelection + " " + computerSelection + " you lose";
   } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    return "you win";
+    return playerSelection + " " + computerSelection + " you win";
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    return "you win";
+    return playerSelection + " " + computerSelection + " you win";
   } else if (playerSelection == "paper" && computerSelection == "paper") {
-    return "tie game";
+    return playerSelection + " " + computerSelection + " tie game";
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
-    return "you lose";
+    return playerSelection + " " + computerSelection + " you lose";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
-    return "you lose";
+    return playerSelection + " " + computerSelection + " you lose";
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    return "you win";
+    return playerSelection + " " + computerSelection + " you win";
   } else {
-    return "tie game";
+    return playerSelection + computerSelection + "tie game";
   }
 }
 
+let userChoice = prompt("Rock, paper scissors: ");
+
+console.log(playGame(userChoice, getComputerChoice()));
