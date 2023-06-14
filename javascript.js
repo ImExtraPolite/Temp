@@ -7,17 +7,23 @@ function multiply(num1, num2) {
 }
 
 function captilize(word) {
-  let sWord = word.toLowerCase();
   let newWord = "";
 
-  for(let i = 0; i < sWord.length; i++) {
-    sWord[0] = sWord.charAt(0).toUpperCase();
-
-    newWord = newWord + sWord[i];
+  for (let i = 0; i < word.length; i++) {
+    if (i == 0) {
+      newWord = newWord + word[0].toUpperCase();
+    } else {
+      newWord = newWord + word[i].toLowerCase();
+    }
   }
 
   return newWord;
 }
 
+function lastLetter(word) {
+  let wordLength = word.length - 1;
 
-console.log(captilize("HELLO"));
+  return word[wordLength];
+}
+
+console.log(lastLetter("abcd"));
