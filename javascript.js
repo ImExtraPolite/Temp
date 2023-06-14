@@ -30,10 +30,22 @@ function playGame(playerSelection, computerSelection) {
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     return playerSelection + " " + computerSelection + " you win";
   } else {
-    return playerSelection + computerSelection + "tie game";
+    return playerSelection + " " + computerSelection + "tie game";
   }
 }
 
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => {
+  console.log(playGame(rock.textContent, getComputerChoice()));
+});
+
+paper.addEventListener("click", () => {
+  console.log(playGame(paper.textContent, getComputerChoice()));
+});
+
+scissors.addEventListener("click", () => {
+  console.log(playGame(scissors.textContent, getComputerChoice()));
+});
