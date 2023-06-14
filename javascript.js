@@ -37,16 +37,29 @@ function playGame(playerSelection, computerSelection) {
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-const results = document.querySelector("#results")
+const results = document.querySelector("#results");
+const wScore = document.querySelector("#wScore");
+const lScore = document.querySelector("#lScore");
+const tScore = document.querySelector("#tScore");
+
+let tie = 0;
+let win = 0;
+let lose = 0;
 
 rock.addEventListener("click", () => {
   let game = playGame(rock.textContent, getComputerChoice());
 
-  if (game == "tie game") {
+  if (game == "tie game" && tie < 5) {
+    tie = tie + 1;
+    tScore.textContent = tie;
     results.textContent = "tie game";
-  } else if (game == "you win") {
+  } else if (game == "you win" && win < 5) {
+    win = win + 1;
+    wScore.textContent = win;
     results.textContent = "you win";
-  } else {
+  } else if (game == "you lose" && lose < 5){
+    lose = lose + 1;
+    lScore.textContent = lose;
     results.textContent = "you lose";
   }
 });
@@ -55,10 +68,13 @@ paper.addEventListener("click", () => {
   let game = playGame(paper.textContent, getComputerChoice());
 
   if (game == "tie game") {
+    tie = tie + 1;
     results.textContent = "tie game";
   } else if (game == "you win") {
+    win = win + 1;
     results.textContent = "you win";
   } else {
+    lose = lose + 1;
     results.textContent = "you lose";
   }});
 
@@ -66,9 +82,12 @@ scissors.addEventListener("click", () => {
   let game = playGame(scissors.textContent, getComputerChoice());
 
   if (game == "tie game") {
+    tie = tie + 1;
     results.textContent = "tie game";
   } else if (game == "you win") {
+    win = win + 1;
     results.textContent = "you win";
   } else {
+    lose = lose + 1;
     results.textContent = "you lose";
   }});
