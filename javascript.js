@@ -14,38 +14,61 @@ function playGame(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
 
   if (playerSelection == "rock" && computerSelection == "rock") {
-    return playerSelection + " " + computerSelection + " tie game";
+    return "tie game";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
-    return playerSelection + " " + computerSelection + " you lose";
+    return "you lose";
   } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    return playerSelection + " " + computerSelection + " you win";
+    return "you win";
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    return playerSelection + " " + computerSelection + " you win";
+    return "you win";
   } else if (playerSelection == "paper" && computerSelection == "paper") {
-    return playerSelection + " " + computerSelection + " tie game";
+    return "tie game";
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
-    return playerSelection + " " + computerSelection + " you lose";
+    return "you lose";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
-    return playerSelection + " " + computerSelection + " you lose";
+    return "you lose";
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    return playerSelection + " " + computerSelection + " you win";
+    return "you win";
   } else {
-    return playerSelection + " " + computerSelection + "tie game";
+    return "tie game";
   }
 }
 
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const results = document.querySelector("#results")
 
 rock.addEventListener("click", () => {
-  console.log(playGame(rock.textContent, getComputerChoice()));
+  let game = playGame(rock.textContent, getComputerChoice());
+
+  if (game == "tie game") {
+    results.textContent = "tie game";
+  } else if (game == "you win") {
+    results.textContent = "you win";
+  } else {
+    results.textContent = "you lose";
+  }
 });
 
 paper.addEventListener("click", () => {
-  console.log(playGame(paper.textContent, getComputerChoice()));
-});
+  let game = playGame(paper.textContent, getComputerChoice());
+
+  if (game == "tie game") {
+    results.textContent = "tie game";
+  } else if (game == "you win") {
+    results.textContent = "you win";
+  } else {
+    results.textContent = "you lose";
+  }});
 
 scissors.addEventListener("click", () => {
-  console.log(playGame(scissors.textContent, getComputerChoice()));
-});
+  let game = playGame(scissors.textContent, getComputerChoice());
+
+  if (game == "tie game") {
+    results.textContent = "tie game";
+  } else if (game == "you win") {
+    results.textContent = "you win";
+  } else {
+    results.textContent = "you lose";
+  }});
