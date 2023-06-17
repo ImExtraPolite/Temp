@@ -1,10 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
+#container {
+  text-align: center;
 }
 
-/* div {
-  padding: 20px 0;
-  max-width: 40px;
-  border: solid black;
-} */
+button {
+  margin-bottom: 20px;
+}
