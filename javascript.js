@@ -1,5 +1,5 @@
-function columns() {
-  for (let i = 1; i <= 16; i++) {
+function columns(rowNum) {
+  for (let i = 1; i <= rowNum; i++) {
     const container = document.querySelector("#container");
     const squares = document.createElement("div");
     squares.classList.add("row" + i);
@@ -9,9 +9,9 @@ function columns() {
   }
 }
 
-function rows() {
-  for (let i = 1; i <= 16; i++) {
-    for (let j = 1; j <= 16; j++) {
+function rows(columnNum) {
+  for (let i = 1; i <= columnNum; i++) {
+    for (let j = 1; j <= columnNum; j++) {
       const rows = document.querySelector(".row" + i);
       const squares = document.createElement("div");
       squares.style.cssText = "padding: 20px; border: solid black;";
@@ -25,5 +25,13 @@ function rows() {
   }
 }
 
-columns();
-rows();
+function num() {
+  num1 = Number(prompt("Enter a number: "));
+
+  return num1
+}
+
+
+// console.log(num());
+columns(num());
+rows(num());
