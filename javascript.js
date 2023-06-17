@@ -26,12 +26,18 @@ function rows(columnNum) {
 }
 
 function num() {
-  num1 = Number(prompt("Enter a number: "));
+  const button = document.querySelector("button");
 
-  return num1
+  button.addEventListener("click", () => {
+    num1 = Number(prompt("Enter a number: "));
+
+    if (num1 > 100) {
+      num1 = Number(prompt("Any number under 100: "));
+    }
+    
+    columns(num1);
+    rows(num1);
+    });
 }
 
-
-// console.log(num());
-columns(num());
-rows(num());
+num();
