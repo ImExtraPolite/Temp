@@ -18,6 +18,10 @@ function rows() {
       squares.style.cssText = "border: solid black; padding: 20px;";
 
       rows.appendChild(squares);
+
+      squares.addEventListener("mouseover", () => {
+        squares.style.cssText = "background-color: black; border: solid black; padding: 20px;";
+      });
     }
   }
 }
