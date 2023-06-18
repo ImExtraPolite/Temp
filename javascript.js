@@ -28,11 +28,13 @@ function rows(columnNum) {
 function num() {
   const button = document.querySelector("button");
 
-  button.addEventListener("click", () => {
-    num1 = Number(prompt("Enter a number: "));
+  button.addEventListener("reset");
 
-    if (num1 > 100) {
-      num1 = Number(prompt("Any number under 100: "));
+  button.addEventListener("click", () => {
+    let num1 = Number(prompt("Enter a number: "));
+
+    while (num1 > 100) {
+      newNum = Number(prompt("Any number under 100: "));
     }
     
     columns(num1);
@@ -41,3 +43,5 @@ function num() {
 }
 
 num();
+// num.reset();
+
